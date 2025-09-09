@@ -1,0 +1,401 @@
+
+@font-face {
+    font-family: 'Sparkle_Passion';
+    src: url(../fonts/sparkle-passion-font-1727137488-0/sparkle-passion.otf);
+}
+
+@font-face {
+    font-family: 'Neue_Montreal';
+    src: url(../fonts/neue-montreal-free-demo-pangram-pangram-030418/NeueMontreal-Medium.otf);
+}
+
+@font-face {
+    font-family: 'Texterius';
+    src: url(../fonts/the_texterius/The\ Texterius.ttf);
+}
+
+@font-face {
+    font-family: 'Montreal';
+    src: url(../fonts/neue-montreal-free-demo-pangram-pangram-030418/NeueMontreal-Regular.otf);
+}
+
+@font-face {
+    font-family: 'MOMCAKE';
+    src: url(../fonts/momcake/Momcake-Bold.otf);
+}
+
+:root {
+    --primary-color: #E4B1F0;
+    --secondary-color: #FF4545;
+    --sparkl: 'Sparkle_Passion';
+    --Neue_Montreal: 'Neue_Montreal';
+    --texterius: 'Texterius';
+    --montreal: 'Montreal';
+    --MOMCAKE: 'MOMCAKE';
+}
+.contact_all , .cart_shopping , .related_product ,
+.collectionPage , .landingCollection ,
+.collection_prd_Pages , .checkout , .shopping , .offcanvas {
+    font-family: var(--texterius);
+}
+
+.title {
+    font-family: var(--texterius);
+}
+.butn {
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    color: white;
+    transition: .4s;
+}
+.butn:hover {
+    background-color: white;
+    color: black;
+}
+header ul ,
+footer ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    
+}
+header .fa-bars ,
+header .fa-brands {
+    display: none; 
+    cursor: pointer;
+}
+
+#drop-menu {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    #drop-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 5%;
+        left: 0;
+        width: 100%;
+        bottom: 0;
+        background-color: #E4E0E1;
+        padding: 1rem 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 4;
+    }
+    #drop-menu li {
+        position: relative;
+        top: 30%;
+    }
+    #drop-menu li a {
+        font-size: 40px;
+    }
+    header .fa-bars ,
+    header .fa-brands {
+        display: block;
+        z-index: 2; 
+    }
+    #drop-menu ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    #drop-menu li {
+        text-align: center;
+        width: 100%;
+        padding: 1rem 0;
+    }
+    #drop-menu .social {
+        position: relative;
+        width: 200%;
+        top: 90%;
+        right: 50%;
+    }
+    #drop-menu .social i ,
+    #drop-menu .social p a {
+        font-size: 30px;
+    }
+}
+
+/* baner Start   */
+
+.banner {
+    width: 100%;
+    overflow: hidden;
+    font-family: var(--Neue_Montreal);
+}
+.banner-content {
+    display: flex;
+    animation: slideX 20s linear infinite;
+}
+
+.promotion {
+    padding: 20px;
+    font-size: 18px;
+    white-space: nowrap; 
+}
+
+@keyframes slideX {
+    0% {
+      transform: translateX(0); 
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+}
+  
+/* baner End */
+
+.landing {
+    background: url(../images/beauty.jpg);
+    background-size: cover;
+    background-color: #E4E0E1;
+    background-position: center;
+}
+.landing h1 {
+    font-family: var(--sparkl);
+}
+.landing .rounded-5 {
+    border: 1px solid var(--primary-color);
+}
+.landing .rounded-5 span {
+    color: var(--primary-color);
+}
+.landing hr {
+    width: 34%;
+    color: var(--primary-color);
+}
+.landing .content {
+    width: 60%;
+}
+.landing .content h1 {
+    font-size: 62px;
+}
+.landing .btn , .productsPage .btn ,
+.landingCollection .btn {
+    color: white;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    box-shadow: 1px 2px 5px rgb(100, 100, 100);
+}
+.landing .btn-2 {
+    color: var(--primary-color);
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+}
+
+@media (max-width: 767px)  {
+    .landing .content {
+        width: 100%;
+        left: 0%;
+    }
+}
+
+.background_collectionPage {
+    background: url(../images/background-collection.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.offresinte {
+    overflow: hidden;
+}
+.nosproducts img {
+    border: 1px solid black;
+}
+.collection {
+    position: relative;
+}
+.collection img {
+    box-shadow: 0px 1px 3px rgb(48, 48, 48);
+    border-radius: 8px;
+}
+.collection .slider-container {
+    width: 88%;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+.collection .slider {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+.collection .card {
+    min-width: 300px;
+    margin: 0 10px;
+    text-align: center;
+    border: none;
+}
+.collection .button-container i {
+    box-shadow: 1px 0.4px 6px rgb(83, 83, 83);
+}
+.collection .button-container {
+    position: absolute;
+    top: 57%;
+    transform: translate(-50% , -50%);
+    display: flex;
+    width: 95%;
+    left: 50%;
+    justify-content: space-between;
+}
+.collection .arrow-button {
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.collection .arrow-button:disabled {
+    color: #bbb;
+    cursor: not-allowed;
+}
+.collection .arrow-button:hover:not(:disabled) {
+    color: #555;
+}
+.collection .arrow-button {
+    opacity: 1;
+}
+
+.collection .bar-grad span ,
+.nosproducts .bar-grad span ,
+.meet .bar-grad span ,
+.nousoffrons .bar-grad span {
+    width: 54px;
+    margin-top: 4px;
+    height: 2px;
+    background-color: black;
+    display: block;
+}
+.collection .bar-grad:last-child span:first-child , 
+.nosproducts .bar-grad:last-child span:first-child ,
+.nousoffrons .bar-grad:last-child span:first-child {
+    margin: auto 26.5px;
+}
+.meet .bar-grad:last-child span:nth-child(2) {
+    margin-left: -20px;
+}
+.meet .bar-grad span {
+    margin-top: 10px;
+    background-color: var(--secondary-color);
+}
+.meet .capillaire {
+    background-color: var(--secondary-color);
+}
+.nosproducts small {
+    font-size: 12px;
+}
+.nosproducts , .productsPages {
+    background-color: #dfd6e1e6;
+    font-family: var(--montreal);
+}
+.nosproducts button {
+    box-shadow: 1px 0px 3px rgb(128, 126, 126);
+}
+.meet small {
+    font-size: 10px;
+    display: block;
+}
+.meet .img-thumbnail {
+    width: 340px;
+}
+.meet .img-fluid {
+    width: 400px;
+}
+.meet .content {
+    padding: 20px;
+}
+.meet .content .text:last-child ,
+.meet .content .text:first-child i  ,
+.meet .content .text:first-child h5   {
+    color: var(--secondary-color);
+}
+.meet {
+    padding: 10px 50px;
+}
+.meet .serum {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 150px;
+    font-family: var(--MOMCAKE);
+}
+@media (max-width: 767px ) {
+    .meet .img-thumbnail {
+        width: 200px;
+    }
+    .meet .content {
+        padding: 0px;
+    }
+    .meet h1 {
+        font-size: 20px;
+    }
+    .meet .serum {
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+    }
+    .meet {
+        padding: 0px;
+    }
+}
+.nousoffrons .card {
+    box-shadow: 1px 1px 4px rgb(84, 84, 84);
+    max-width: 450px;
+    font-family: var(--Neue_Montreal);
+}
+
+.nousoffrons .card img {
+    width: 200px;
+}
+
+/* Collection-Page Start */
+
+.landingCollection {
+    background: url(../images/flowers-cosmetics-containers.jpg);
+    height: 100vh;
+    background-size: cover;
+}
+
+/* Collection-Page End */
+
+/* products-Page Start */
+
+.productsPage {
+    background: url(../images/backgound-Product.jpg);
+    height: 100vh;
+    background-size: cover;
+}
+
+.productsPages .active>.page-link,
+.productsPages .page-link.active {
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+/* products-Page End */
+
+/* Contact Start  */
+.contact .overlay {
+    background-color: rgb(0 0 0 /.4);
+    height: 100%;
+    width: 100%;
+}
+.row input:focus , .row textarea:focus {
+    outline: none;
+    box-shadow: none;
+    border: 1px solid black;
+}
+.contact {
+    background-image: url(../images/young-beautiful-conact.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+.inpContac {
+    outline: none;
+    border:1px solid black;
+}
+
+/* Contact End  */
+
+
